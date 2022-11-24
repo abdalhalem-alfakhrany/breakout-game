@@ -1,0 +1,6 @@
+external/imgui-1.88
+external/imgui-sfml-2.5
+external/SFML-2.5.1/share
+external/box2d
+src/main.debug.cpp
+build/imgui.ini

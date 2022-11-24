@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "build",
+			"command": "clang++",
+			"args": [
+				// input files 
+				"src/Break.cpp",
+				"src/main.cpp",
+				// "${workspaceFolder}/external/imgui-sfml-2.5/imgui-SFML.cpp",
+				
+				// output files
+				"-o",
+				"build/breakout",
+				
+				// flags
+				"-g",
+				
+				// include dirs
+				"-I${workspaceFolder}/external/SFML-2.5.1/include",
+				// "-I${workspaceFolder}/external/imgui-1.88/include",
+                // "-I${workspaceFolder}/external/imgui-sfml-2.5/include",
+                // "-I${workspaceFolder}/external/box2d/include",
+
+				// lib dirs
+				"-L${workspaceFolder}/external/SFML-2.5.1/lib",
+				// "-L${workspaceFolder}/external/imgui-1.88/lib",
+				// "-L${workspaceFolder}/external/box2d/lib",
+
+				// link libs
+				"-lsfml-graphics",
+				"-lsfml-system",
+				"-lsfml-window",
+				// "-limgui",
+				// "-lbox2d",
+				// "-lGL",
+
+				// repath
+				"-Wl,-R/${workspaceFolder}/external/SFML-2.5.1/lib",
+				// "-Wl,-R${workspaceFolder}/external/imgui-1.88/lib",
+				// "-Wl,-R${workspaceFolder}/external/box2d/lib",
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+		}
+	]
+}
